@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | Padépokan Kreatip</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .portfolio-hero {
+            background-image: url('https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.1);
+        }
+        .filter-btn.active {
+            background-color: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-gray-900/80 backdrop-blur-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="text-2xl font-bold text-rose-500">PADÉPOKAN KREATIP</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="about.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="services.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#" class="text-rose-400 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                        <a href="contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="portfolio-hero h-96 flex items-center justify-center text-center relative mt-16">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">Our Work</h1>
+            <p class="text-xl text-gray-200">Explore our collection of creative projects</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="py-12 bg-slate-900 sticky top-16 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="filter-btn px-4 py-2 rounded-full bg-slate-800 text-gray-300 hover:bg-rose-500 hover:text-white transition active" data-filter="all">All Projects</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-slate-800 text-gray-300 hover:bg-rose-500 hover:text-white transition" data-filter="branding">Branding</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-slate-800 text-gray-300 hover:bg-rose-500 hover:text-white transition" data-filter="web">Web Design</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-slate-800 text-gray-300 hover:bg-rose-500 hover:text-white transition" data-filter="app">App Development</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-slate-800 text-gray-300 hover:bg-rose-500 hover:text-white transition" data-filter="marketing">Marketing</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="portfolio-item bg-slate-800 rounded-xl overflow-hidden" data-category="branding">
+                    <div class="relative group">
+                        <img src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg" alt="Brand Identity Project" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">Nusantara Foods</h3>
+                                <p class="text-gray-300 mb-4">Complete brand identity for traditional food company</p>
+                                <a href="#" class="text-rose-400 hover:text-rose-300 font-medium inline-flex items-center">
+                                    View Case Study
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Nusantara Foods</h3>
+                                <p class="text-rose-500">Brand Identity</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-700 rounded-full text-gray-300">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item bg-slate-800 rounded-xl overflow-hidden" data-category="web">
+                    <div class="relative group">
+                        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="E-commerce Website" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">Batik Heritage</h3>
+                                <p class="text-gray-300 mb-4">E-commerce platform for traditional batik products</p>
+                                <a href="#" class="text-rose-400 hover:text-rose-300 font-medium inline-flex items-center">
+                                    View Case Study
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Batik Heritage</h3>
+                                <p class="text-rose-500">E-commerce Website</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-700 rounded-full text-gray-300">2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item bg-slate-800 rounded-xl overflow-hidden" data-category="app">
+                    <div class="relative group">
+                        <img src="https://images.pexels.com/photos/3999536/pexels-photo-3999536.jpeg" alt="Fitness App" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">FitTrack Pro</h3>
+                                <p class="text-gray-300 mb-4">Mobile fitness tracking application</p>
+                                <a href="#" class="text-rose-400 hover:text-rose-300 font-medium inline-flex items-center">
+                                    View Case Study
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">FitTrack Pro</h3>
+                                <p class="text-rose-500">Mobile Application</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-700 rounded-full text-gray-300">2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item bg-slate-800 rounded-xl overflow-hidden" data-category="marketing">
+                    <div class="relative group">
+                        <img src="https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg" alt="Social Media Campaign" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">Java Coffee Co.</h3>
+                                <p class="text-gray-300 mb-4">Social media marketing campaign</p>
+                                <a href="#" class="text-rose-400 hover:text-rose-300 font-medium inline-flex items-center">
+                                    View Case Study
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Java Coffee Co.</h3>
+                                <p class="text-rose-500">Digital Marketing</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-700 rounded-full text-gray-300">2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item bg-slate-800 rounded-xl overflow-hidden" data-category="branding">
+                    <div class="relative group">
+                        <img src="https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg" alt="Packaging Design" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">Bali Spice</h3>
+                                <p class="text-gray-300 mb-4">Packaging design for spice products</p>
+                                <a href="#" class="text-rose-400 hover:text-rose-300 font-medium inline-flex items-center">
+                                    View Case Study
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Bali Spice</h3>
+                                <p class="text-rose-500">Packaging Design</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-700 rounded-full text-gray-300">2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item bg-slate-800 rounded-xl overflow-hidden" data-category="web">
+                    <div class="relative group">
+                        <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg" alt="Corporate Website" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div>
+                                <h3 class="text-white font-bold text-xl">Mandiri Finance</h3>
+                                <p class="text-gray-300 mb-4">Corporate website redesign</p>
+                                <a href="#" class="text-rose-400 hover:text-rose-300 font-medium inline-flex items-center">
+                                    View Case Study
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Mandiri Finance</h3>
+                                <p class="text-rose-500">Corporate Website</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-700 rounded-full text-gray-300">2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="px-6 py-3 border border-rose-500 text-rose-500 rounded-md hover:bg-rose-500 hover:text-white transition duration-300">
+                    Load More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Client Testimonials</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">What our clients say about working with us</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-800 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"Padépokan Kreatip transformed our brand identity completely. Their team understood our vision and delivered beyond expectations."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="text-white font-medium">Sarah Wijaya</h4>
+                            <p class="text-gray-400 text-sm">CEO, Nusantara Foods</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-800 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"The e-commerce website they built increased our sales by 300% in the first month. Their attention to detail is remarkable."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.pexels.com/photos/3778603/pexels-photo-3778603.jpeg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="text-white font-medium">Andi Rahman</h4>
+                            <p class="text-gray-400 text-sm">Founder, Batik Heritage</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-slate-800 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"Their digital marketing strategy brought us 5x more leads than we were getting before. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="text-white font-medium">Dewi Lestari</h4>
+                            <p class="text-gray-400 text-sm">Marketing Director, Java Coffee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-rose-500 mb-4">PADÉPOKAN KREATIP</h3>
+                    <p class="text-gray-400">Transforming visions into remarkable digital experiences through creativity and technology.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Brand Identity</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">App Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                    <p class="text-gray-400">hello@padepokankreatip.com</p>
+                    <p class="text-gray-400">+62 123 4567 890</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Padépokan Kreatip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Filter items
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
